@@ -1,0 +1,382 @@
+
+ body {
+    margin: 0 10%;
+    overflow-x: hidden;
+}
+
+.try {
+    margin: 4rem 0;
+    display: flex;
+    gap: 7rem;
+    margin-bottom: 5rem;
+}
+
+#hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3rem;
+    text-decoration: none;
+
+}
+
+.menu {
+    font-size: 2.5rem;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+}
+
+.nav{
+    display: flex;
+    list-style-type: none;
+    gap: 4rem;
+}
+
+.nav li::before {
+    position: absolute;
+    content:'';
+    width: 0%;
+    border-bottom: 3px solid rgb(92, 92, 92);
+    bottom: 30%;
+    transition: width 0.5s;
+
+}
+
+/* Left Column */
+
+#left-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+} 
+
+.slogan {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin: 3.5rem 0 1rem 0;
+    font-weight: 700;
+}
+
+.description {
+    font-family: 'Playfair Display', serif;
+}
+
+#hotel-achievements {
+    margin-top: 2rem;
+    padding-top: 1.3rem;
+    border-top: 3px solid black;
+
+}
+
+.confetti {
+    position: absolute;
+    top: 68%;
+    height: 100px;
+}
+
+.achievement {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    display: flex;
+    background-color: #e7e2d3;
+    padding: 1rem;
+    justify-content: center;
+    width: 27rem;
+    border-radius: 0.5em;
+    font-weight: 700;
+
+}
+
+/* right coloumn */
+
+#right-col {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 250px);
+    grid-template-areas: 
+        "A B"
+        "A C"
+        "D D";
+    gap: 1.5rem;
+    flex-grow: 1;
+    align-content: center;
+}
+
+.picture-one {
+    grid-area: A;
+    background-image: url(css/A.jpg);
+    background-size: cover;
+    border-radius: 0.5em;
+
+}
+
+.picture-two {
+    grid-area: B;
+    background-image: url(css/B.jpg);
+    background-size: cover;
+    border-radius: 0.5em;
+
+    
+}
+
+.picture-three {
+    grid-area: C;
+    background-image: url(css/C.jpg);
+    background-size: cover;
+    border-radius: 0.5em;
+}
+
+/* Effects */
+
+.nav li:hover::before {
+    width: 7%;
+}
+
+.achievement:hover {
+    background: linear-gradient(to right, #5a3f37, #2c7744);
+    color: white;
+}
+
+/* SUBMIT FORM */
+
+#main-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 0;
+}
+
+#footer-header {
+    background: linear-gradient(to right, #5a3f37, #2c7744);
+    border-radius: 8px;
+    margin-left: -200px;
+    margin-right: -200px;
+}
+
+#contactUs {
+    margin: 5em auto;
+    width: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 3em 1.5em 3em;
+    box-shadow: 2px 2px 4px #5a3f37;
+    align-content: center;
+    position: relative;
+}
+
+#loader {
+    display: none;
+    pointer-events: none;
+    width: 30%;
+    height: 30vh;
+    border: 10px solid transparent;
+    border-top-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: loading 1s ease infinite;
+    z-index: 999;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+} 
+
+
+#backdrop {
+    position: fixed;
+    margin: 0 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(3px); 
+    z-index: 998; 
+    display: none; 
+}
+
+
+
+
+
+
+
+#contactUs div {
+    margin-top: 20px;
+}
+
+
+.bottom {
+    margin-bottom: 0;
+}
+
+#footer-header h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+#footer-header p {
+    color: white;
+    text-align: center;
+}
+
+.top-header {
+    background: linear-gradient(to right, #5a3f37, #2c7744);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 -50px;
+    padding: 1em;
+}
+
+label {
+    margin-top: 5px;
+}
+
+form div {
+    margin-bottom: 2em;
+}
+
+
+small.smallError {
+    display: block;
+    color: red;
+}
+
+.errorMessage {
+    visibility: visible;
+    color: red;
+}
+
+input, textarea {
+    border-radius: 4px;
+    border: 1px solid #708071;
+    padding: 0.5em;
+}
+
+input.error, textarea.error {
+    border-radius: 4px;
+    border: 2px solid #a3334f;
+    padding: 0.5em;
+}
+
+.button {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border: 1px solid #708071;
+    background-color: #708071;
+    padding: .8em;
+    margin-top: 20px;
+    box-shadow: 2px 2px 4px #6d756e;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* ICONS */
+
+
+#message {
+    margin: 0;
+}
+
+
+#iconContainer{
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+.error-border {
+    border: 2px solid red;
+}
+
+
+
+
+i {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    transform: translateY(-65%);
+    left: 160px;
+    color: rgb(224, 48, 48);
+    visibility: hidden;
+}
+
+
+
+
+
+
+#userNameError {
+    border: 2px solid rgb(224, 48, 48);
+}
+
+
+
+/* LOADER - SUBMIT FORM */
+
+
+#loaderDisplay {
+    display: none;
+    pointer-events: none;
+    width: 30%;
+    height: 30vh;
+    border: 10px solid transparent;
+    border-top-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: loading 1s ease infinite;
+    z-index: 999;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+} 
+
+
+#backdropDisplay {
+    position: fixed;
+    margin: 0 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(3px); 
+    z-index: 998; 
+    display: none; 
+}
